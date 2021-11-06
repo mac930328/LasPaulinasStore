@@ -16,6 +16,7 @@ public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Temporal(TemporalType.DATE)
     private Date orderDate;
     @ManyToOne
     @JoinColumn(name = "client_id")
